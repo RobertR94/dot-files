@@ -52,6 +52,8 @@ return {
         "pylint",
         "eslint_d",
         "debugpy",
+        "clang-format", --cpp formatter
+        "codelldb",
       },
     })
   end,

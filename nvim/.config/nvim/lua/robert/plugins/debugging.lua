@@ -3,7 +3,6 @@ return {
   dependencies = {
     "rcarriga/nvim-dap-ui",
     "nvim-neotest/nvim-nio",
-    "mfussenegger/nvim-dap-python",
   },
 
   config = function()
@@ -23,9 +22,6 @@ return {
     dap.listeners.before.event_exited.dapui_config = function()
       dapui.close()
     end
-
-    local path_python = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-    require("dap-python").setup(path_python)
 
     vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint)
     vim.keymap.set("n", "<Leader>dc", dap.continue)
