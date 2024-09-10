@@ -85,6 +85,24 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["clangd"] = function()
+        lspconfig["clangd"].setup({
+          capabilities = capabilities,
+          cmd = {
+            "clangd",
+            "--clang-tidy",
+            "--header-insertion=never",
+            "--pch-storage=memory",
+          },
+          settings = {
+            clangd = {
+              arguments = {
+                "-I${workspaceFolder}/**",
+              },
+            },
+          },
+        })
+      end,
       ["svelte"] = function()
         -- configure svelte server
         lspconfig["svelte"].setup({
