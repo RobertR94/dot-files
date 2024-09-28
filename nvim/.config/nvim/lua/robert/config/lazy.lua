@@ -4,13 +4,13 @@ if not vim.loop.fs_stat(lazypath) then
     "git",
     "clone",
     "--filter=blob:none",
+    "--verbose",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable", -- latest stable release
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({ { import = "robert.plugins" }, { import = "robert.plugins.lsp" } }, {
   checker = {
     enabled = true,
@@ -20,4 +20,3 @@ require("lazy").setup({ { import = "robert.plugins" }, { import = "robert.plugin
     notify = false,
   },
 })
-
