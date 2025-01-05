@@ -35,7 +35,6 @@ return {
         "graphql",
         "emmet_ls",
         "prismals",
-        "pyright",
         "rust_analyzer",
         "clangd",
         "cmake",
@@ -49,7 +48,6 @@ return {
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
-        "pylint",
         "eslint_d",
         "debugpy",
         "clang-format", --cpp formatter
