@@ -255,3 +255,4 @@ client.background        $base
 
 
 for_window [class="^Tk$"] floating enable
+for_window [class="matplotlib"] floating enable
