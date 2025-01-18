@@ -1,0 +1,6 @@
+BasedOnStyle: llvm
+IndentWidth: 4
+ColumnLimit: 120
+BinPackParameters: true
+BreakBeforeBraces: Allman
+AlignAfterOpenBracket: false
