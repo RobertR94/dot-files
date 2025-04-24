@@ -67,6 +67,9 @@ bindsym $mod+space exec rofi -show combi
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# start okular
+bindsym $mod+Shift+p exec okular
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
@@ -133,8 +136,15 @@ bindsym $mod+Control+3 workspace 3; exec --no-startup-id firefox
 bindsym $mod+Control+4 workspace 4; exec --no-startup-id code
 # Switch to workspace 5 or open Firefox with YouTube
 bindsym $mod+Control+5 workspace 5; exec --no-startup-id firefox --new-window https://www.youtube.com
-# Switch to workspace 6 or open Discord
-bindsym $mod+Control+6 workspace 6; exec --no-startip-id discord
+# Switch to workspace 1 or open a terminal if it's not already there
+bindsym $mod+Control+6 workspace 6; exec --no-startup-id alacritty
+# Switch to workspace 7 or open Discord
+bindsym $mod+Control+7 workspace 7; exec --no-startup-id discord
+# Switch to workspace 8 or open firefox
+bindsym $mod+Control+8 workspace 8; exec --no-startup-id firefox
+# Switch to workspace 9 or open spotify
+bindsym $mod+Control+9 workspace 9; exec --no-startup-id spotify
+
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -236,7 +246,7 @@ set $text      #cdd6f4
 set $subtext1  #bac2de
 set $subtext0  #a6adc8
 set $overlay2  #9399b2
-set $overlay1  #7f849c
+set $overlay1  #7f849c:
 set $overlay0  #6c7086
 set $surface2  #585b70
 set $surface1  #45475a
@@ -245,7 +255,7 @@ set $base      #1e1e2e
 set $mantle    #181825
 set $crust     #11111b
 
-# target                 title     bg    text      indicator    border
+# target               :  title     bg    text      indicator    border
 client.focused           $mantle   $mauve $mantle  $rosewater $mauve
 client.focused_inactive  $overlay0 $base  $text    $rosewater $overlay0
 client.unfocused         $overlay0 $base  $text    $rosewater $overlay0
@@ -256,3 +266,5 @@ client.background        $base
 
 for_window [class="^Tk$"] floating enable
 for_window [class="matplotlib"] floating enable
+
+
