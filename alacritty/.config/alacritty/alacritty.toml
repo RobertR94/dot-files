@@ -35,3 +35,13 @@ style = "Regular"
 import = [
 "~/.config/alacritty/themes/coolnight.toml"
 ]
+
+[[keyboard.bindings]]
+key = "Up"
+mods = "Control"
+chars = "\u001b[1;5A"
+
+[[keyboard.bindings]]
+key = "Down"
+mods = "Control"
+chars = "\u001b[1;5B"
