@@ -20,30 +20,10 @@ return {
         liquid = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
-        cpp = {
-          exe = "clang-format",
-          args = {
-            "-style={BasedOnStyle: llvm, IndentWidth: 4, ColumnLimit: 120, BinPackParameters: true, BreakBeforeBraces: Allman}",
-          },
-        },
-        c = {
-          exe = "clang-format",
-          args = {
-            "-style={BasedOnStyle: llvm, IndentWidth: 4, ColumnLimit: 120, BinPackParameters: true, BreakBeforeBraces: Allman}",
-          },
-        },
-        h = {
-          exe = "clang-format",
-          args = {
-            "-style={BasedOnStyle: llvm, IndentWidth: 4, ColumnLimit: 120, BinPackParameters: true, BreakBeforeBraces: Allman}",
-          },
-        },
-        hxx = {
-          exe = "clang-format",
-          args = {
-            "-style={BasedOnStyle: llvm, IndentWidth: 4, ColumnLimit: 120, BinPackParameters: true, BreakBeforeBraces: Allman}",
-          },
-        },
+        cpp = { "clang-format" },
+        c = { "clang-format" },
+        h = { "clang-format" },
+        hxx = { "clang-format" },
       },
       format_on_save = {
         lsp_fallback = true,

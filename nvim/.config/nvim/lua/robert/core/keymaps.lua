@@ -21,18 +21,3 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
-
--- Normal mode
-vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
-
--- Visual mode
-vim.api.nvim_set_keymap("v", "<Tab>", ">gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
-
--- Insert mode
-vim.api.nvim_set_keymap("i", "<Tab>", "<C-T>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<S-Tab>", "<C-O><<", { noremap = true, silent = true })
-
--- Map Shift+Tab to un-indent the current line in insert mode
-vim.api.nvim_set_keymap("i", "<S-Tab>", "<C-O><<", { noremap = true, silent = true })
