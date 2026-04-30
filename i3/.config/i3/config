@@ -129,9 +129,9 @@ bindsym $mod+a focus parent
 
 # open important Workspaces
 # Switch to workspace 1 or open a terminal if it's not already there
-bindsym $mod+Control+1 workspace number $ws1; exec --no-startup-id alacritty
+bindsym $mod+Control+1 workspace number $ws1; exec --no-startup-id ghostty
 # Switch to workspace 2 or open a terminal with nvim
-bindsym $mod+Control+2 workspace number $ws2; exec --no-startup-id alacritty
+bindsym $mod+Control+2 workspace number $ws2; exec --no-startup-id ghostty
 # Switch to workspace 3 or open Firefox
 bindsym $mod+Control+3 workspace 3; exec --no-startup-id firefox
 # Switch to workspace 4 or open VS Code
@@ -139,7 +139,7 @@ bindsym $mod+Control+4 workspace 4; exec --no-startup-id code
 # Switch to workspace 5 or open Firefox with YouTube
 bindsym $mod+Control+5 workspace 5; exec --no-startup-id firefox --new-window https://www.youtube.com
 # Switch to workspace 1 or open a terminal if it's not already there
-bindsym $mod+Control+6 workspace 6; exec --no-startup-id alacritty
+bindsym $mod+Control+6 workspace 6; exec --no-startup-id ghostty
 # Switch to workspace 7 or open Discord
 bindsym $mod+Control+7 workspace 7; exec --no-startup-id discord
 # Switch to workspace 8 or open firefox
