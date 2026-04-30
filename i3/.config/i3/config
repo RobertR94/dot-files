@@ -41,8 +41,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Start polybar
-exec_always --no-startup-id killall -q polybar
-exec_always --no-startup-id polybar toph -c ~/.config/polybar/config.ini
+exec_always --no-startup-id sh -c 'polybar-msg cmd quit; \
+  while pgrep -x polybar >/dev/null; do sleep 0.2; done; \
+  polybar -c ~/.config/polybar/config.ini toph &'
+exec_always --no-startup-id polybar -c ~/.config/polybar/config.ini toph
 exec_always --no-startup-id feh --bg-scale ~/.config/backgrounds/mountain_day.jpg
 
 # Use pactl to adjust volume in PulseAudio.
@@ -145,6 +147,9 @@ bindsym $mod+Control+8 workspace 8; exec --no-startup-id firefox
 # Switch to workspace 9 or open spotify
 bindsym $mod+Control+9 workspace 9; exec --no-startup-id spotify
 
+# Screenshots with flameshot
+bindsym $mod+p exec flameshot gui
+bindsym $mod+Control+p exec flameshot gui -c
 
 # focus the child container
 #bindsym $mod+d focus child
