@@ -7,6 +7,7 @@ return {
             "rust_analyzer",
             "cmake",
             "pyright",
+            "kotlin-lsp",
         },
         automatic_installation = true,
         automatic_enable = {
