@@ -1,12 +1,11 @@
 return {
-  "jay-babu/mason-nvim-dap.nvim",
-  event = "VeryLazy",
-  dependencies = {
-    "mason-org/mason.nvim",        
-    "mfussenegger/nvim-dap",
-  },
-  opts = {
-    handlers = {}, -- optional: add debugger-specific setup if needed
-  },
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+        "mason-org/mason.nvim",
+        "mfussenegger/nvim-dap",
+    },
+    opts = {
+        handlers = {}, -- optional: add debugger-specific setup if needed
+    },
 }
-
